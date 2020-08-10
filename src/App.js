@@ -1,24 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import NavBar from './Components/NavBar'
+import Landing from './Components/Landing';
+import FooterBar from './Components/FooterBar'
 function App() {
+  const tabSelection = useState(0);
+  const countrySelection = useState("AF");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar countrySelection={countrySelection}/>
+      <Landing currentScreen={tabSelection[0]} countrySelection={countrySelection}/>
+      <FooterBar tabSelection={tabSelection}/>
     </div>
   );
 }
