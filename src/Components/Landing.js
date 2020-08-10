@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import OverAllStatus from './OverAllStatus';
 import CountryWise from './CountryWise';
+import BarChart from './BarChart';
 
 export default function Landing(props) {
   const currentScreen = props.currentScreen;
@@ -20,5 +21,12 @@ export default function Landing(props) {
           <CountryWise countrySelection={countrySelection}/>
       </div>
     );    
+  }
+  else if(currentScreen === 2){
+    return(
+      <div>
+        <BarChart/>
+      </div>
+    );
   }
 }

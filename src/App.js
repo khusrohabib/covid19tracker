@@ -6,7 +6,7 @@ import Landing from './Components/Landing';
 import FooterBar from './Components/FooterBar'
 function App() {
   const tabSelection = useState(0);
-  const countrySelection = useState("AF");
+  const countrySelection = useState("");
 
   return (
     <div>

@@ -9,7 +9,7 @@ import PersonPinIcon from '@material-ui/icons/PersonPin';
 
 const useStyles = makeStyles({
   root: {
-    position: 'absolute',
+    position: 'fixed',
     bottom: 0,
     right: 0,
     left: 0
