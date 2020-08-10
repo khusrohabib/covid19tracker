@@ -25,7 +25,7 @@ export default function BarChart() {
   const classes = useStyles();
   const [graphData, setGraphData] = useState(data);
   const [draw, setDraw] = useState(false);
-  var dictionary = new Object();
+  var dictionary = {};
 
   useEffect(() => {
     async function getData() {
@@ -61,7 +61,7 @@ export default function BarChart() {
       setDraw(true);
     }
     getData();
-  }, [graphData])
+  }, [])
 
   return (
     <div className={classes.chart}>

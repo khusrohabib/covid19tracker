@@ -32,8 +32,7 @@ export default function CountryWise(props) {
           countrySelection[0]
       );
       let data = await response.json();
-      debugger;
-      if (data.countrydata != undefined) {
+      if (data.countrydata !== undefined) {
         delete data.countrydata[0]["info"];
         setGlobalData(data.countrydata[0]);
       }

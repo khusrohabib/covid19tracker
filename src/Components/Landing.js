@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import OverAllStatus from './OverAllStatus';
 import CountryWise from './CountryWise';
 import BarChart from './BarChart';
