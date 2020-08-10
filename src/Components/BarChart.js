@@ -61,7 +61,7 @@ export default function BarChart() {
       setDraw(true);
     }
     getData();
-  }, [])
+  }, [dictionary])
 
   return (
     <div className={classes.chart}>
