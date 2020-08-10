@@ -38,7 +38,7 @@ export default function CountryWise(props) {
         setGlobalData(data.countrydata[0]);
       }
       else{
-        alert("No data for selected country")
+        alert("No data for selected country ")
       }
     }
     getData();
