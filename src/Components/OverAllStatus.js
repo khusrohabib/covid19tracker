@@ -45,7 +45,7 @@ export default function OverAllStatus() {
                 <Grid item xs={12} sm={4} key={ind}>
                 <Paper className={classes.paper} elevation={3}>
                     <h3 className={classes.title}>{key.replace(/_/g," ")}</h3>
-                    {globalData[key]}
+                    {globalData[key].toLocaleString()}
                     </Paper>
               </Grid>
             )

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 
 import Typography from "@material-ui/core/Typography";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import InputLabel from "@material-ui/core/InputLabel";
+
 import { fade, makeStyles } from "@material-ui/core/styles";
 
 
@@ -67,24 +65,7 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar({ countrySelection }) {
   const classes = useStyles();
 
-  const [countries, setCountries] = useState([{}]);
-
-  useEffect(() => {
-    async function getCountries() {
-      const response = await fetch(
-        "http://countryapi.gear.host/v1/Country/getCountries"
-      );
-      let data = await response.json();
-      setCountries(data.Response);
-      console.log(data.Response);
-    }
-    getCountries();
-  }, []);
-
-  const handleChange = (event)=>{
-    countrySelection[1](event.target.value);
-  }
-
+  
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -92,29 +73,6 @@ export default function NavBar({ countrySelection }) {
           <Typography className={classes.title} variant="h6" noWrap>
             COVID 19 Tracker
           </Typography>
-          <div>
-            <div>
-              <FormControl className={classes.formControl}>
-                <InputLabel htmlFor="age-native-simple">Select Country</InputLabel>
-                <Select
-                  native
-                  value={countrySelection[0]}
-                  onChange={handleChange}
-                  inputProps={{
-                    name: "age",
-                    id: "age-native-simple",
-                  }}
-                >
-                  <option aria-label="None" value="" />
-                  {
-                    countries.map((val, ind) => {
-                        return <option value={val.Alpha2Code}>{val.Name}</option>;
-                    })
-                  }
-                </Select>
-              </FormControl>
-            </div>
-          </div>
         </Toolbar>
       </AppBar>
     </div>

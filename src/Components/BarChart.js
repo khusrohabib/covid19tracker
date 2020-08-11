@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Bar } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -33,7 +33,7 @@ export default function BarChart() {
         "https://api.thevirustracker.com/free-api?countryTotals=ALL"
       );
       let apiData = await response.json();
-
+      debugger;
       Object.keys(apiData.countryitems[0]).forEach(function (key) {
         dictionary[apiData.countryitems[0][key]["title"]] =
           apiData.countryitems[0][key]["total_new_cases_today"];
@@ -66,15 +66,9 @@ export default function BarChart() {
   return (
     <div className={classes.chart}>
       <h2>Top 20 Countries</h2>
-      <Bar
+      <HorizontalBar
         redraw={draw}
-        data={graphData}
-        width={100}
-        height={200}
-        options={{
-          maintainAspectRatio: false,
-        }}
-        
+        data={graphData}       
       />
     </div>
   );

@@ -3,9 +3,9 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
+import EqualizerSharpIcon from '@material-ui/icons/EqualizerSharp';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
+import PublicSharpIcon from '@material-ui/icons/PublicSharp';
 
 const useStyles = makeStyles({
   root: {
@@ -33,9 +33,9 @@ export default function FooterBar({tabSelection}) {
         textColor="secondary"
         aria-label="icon label tabs example"
       >
-        <Tab icon={<PhoneIcon />} label="Overall Status" />
+        <Tab icon={<PublicSharpIcon />} label="Overall Status" />
         <Tab icon={<FavoriteIcon />} label="Country Wise" />
-        <Tab icon={<PersonPinIcon />} label="Stats" />
+        <Tab icon={<EqualizerSharpIcon />} label="Stats" />
       </Tabs>
     </Paper>
   );
