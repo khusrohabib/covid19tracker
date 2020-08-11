@@ -3,9 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import EqualizerSharpIcon from '@material-ui/icons/EqualizerSharp';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PublicSharpIcon from '@material-ui/icons/PublicSharp';
+
 
 const useStyles = makeStyles({
 
