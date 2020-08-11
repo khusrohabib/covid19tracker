@@ -10,8 +10,8 @@ function App() {
   return (
     <div>
       <NavBar countrySelection={countrySelection}/>
-      <Landing currentScreen={tabSelection[0]} countrySelection={countrySelection}/>
       <FooterBar tabSelection={tabSelection}/>
+      <Landing currentScreen={tabSelection[0]} countrySelection={countrySelection}/>
     </div>
   );
 }

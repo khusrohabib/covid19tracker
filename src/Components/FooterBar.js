@@ -8,12 +8,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import PublicSharpIcon from '@material-ui/icons/PublicSharp';
 
 const useStyles = makeStyles({
-  root: {
-    position: 'fixed',
-    bottom: 0,
-    right: 0,
-    left: 0
-  },
+
 });
 
 export default function FooterBar({tabSelection}) {
@@ -33,9 +28,9 @@ export default function FooterBar({tabSelection}) {
         textColor="secondary"
         aria-label="icon label tabs example"
       >
-        <Tab icon={<PublicSharpIcon />} label="Overall Status" />
-        <Tab icon={<FavoriteIcon />} label="Country Wise" />
-        <Tab icon={<EqualizerSharpIcon />} label="Stats" />
+        <Tab label="Overall Status" />
+        <Tab label="Country Wise" />
+        <Tab label="Top 20" />
       </Tabs>
     </Paper>
   );

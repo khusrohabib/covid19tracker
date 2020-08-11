@@ -3,7 +3,9 @@ import { HorizontalBar } from "react-chartjs-2";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-  chart: {},
+  chart: {
+    height: "100%"
+  },
 });
 
 const data = {
@@ -33,7 +35,6 @@ export default function BarChart() {
         "https://api.thevirustracker.com/free-api?countryTotals=ALL"
       );
       let apiData = await response.json();
-      debugger;
       Object.keys(apiData.countryitems[0]).forEach(function (key) {
         dictionary[apiData.countryitems[0][key]["title"]] =
           apiData.countryitems[0][key]["total_new_cases_today"];
@@ -67,6 +68,8 @@ export default function BarChart() {
     <div className={classes.chart}>
       <h2>Top 20 Countries</h2>
       <HorizontalBar
+      height={400}
+
         redraw={draw}
         data={graphData}       
       />
