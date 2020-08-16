@@ -71,7 +71,7 @@ export default function NavBar({ countrySelection }) {
       <AppBar position="static">
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            COVID 19 Tracker
+            COVID 19 Tracker App
           </Typography>
         </Toolbar>
       </AppBar>
